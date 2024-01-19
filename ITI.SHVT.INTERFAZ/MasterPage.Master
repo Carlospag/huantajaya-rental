@@ -1,0 +1,187 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterPage.master.vb" Inherits="ITI.SHVT.INTERFAZ.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="Content/img/hrentalicono.ico" type="image/x-icon" />
+    <!-- Los 3 meta tags de arriba deben ser los primeros en el head, cualquier otro contenido del head debe venir después-->
+    <title></title>
+
+    <!--boostrap-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--boostrap-->
+    <link href="Content/personalizado.css" rel="stylesheet" />
+
+
+    <!--datepicker css-->
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+
+    <!--Switch css-->
+    <link href="Content/bootstrap-switch.min.css" rel="stylesheet" />
+
+    <!--Font Awesome-->
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+
+    <!-- CSS Personalizado -->
+    <link href="Content/Default.css" rel="stylesheet" />
+    <link href="Content/sticky-footer-navbar.css" rel="stylesheet" />
+
+    <!-- Jquery, necesario para los plugins de bootstrap -->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <!-- Incluir todos los plugins de bootstrap debajo -->
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="Scripts/bootstrap-switch.js"></script>
+    <script src="Content/footable.js"></script>
+    <%--<script src="jquery.js"></script>--%>
+    <script src="Scripts/locales/bootstrap-datepicker.es.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet" />
+    <link href="Content/bootstrap-chosen.css" rel="stylesheet" />
+    <script src="Scripts/chosen.jquery.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body style="padding-bottom: 70px">
+    <form id="form1" method="post" enctype="multipart/form-data" runat="server">
+        <div>
+            <!-- Cabecera -->
+            <header class="navbar" role="banner" id="BarraNavegacion">
+                <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <!-- navbar-fixed-top -->
+                    <div class="" id="ContenedorNavbar">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div>
+                                <div class="row">
+
+                                    <div class="col-md-3" id="LogoUno">
+                                        <a href="frm_Inicio.aspx">
+                                            <img class="logo-iti-inicio" src="Content/img/capa1.png" alt="iti" height="50" /></a>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p class="pull-left" id="Identificacion">
+                                            <asp:Label runat="server" ID="lbl_NombreUsuario" CssClass="solo-linea span-header"></asp:Label>
+                                            Cargo:
+                                            <asp:Label runat="server" ID="lbl_Area" CssClass="span-header"></asp:Label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <nav class="navbar-collapse collapse">
+                            <!-- SQLDataSource a utilizar -->
+                            <asp:SqlDataSource ID="sds_MenuSuperiorPadre" runat="server" ConnectionString="<%$ ConnectionStrings:SHVTBDConnectionString %>"
+                                SelectCommand="up_parque_s_MenuSuperior" SelectCommandType="StoredProcedure">
+                                <SelectParameters>
+                                    <asp:Parameter Name="id_Usuario" Type="Int32"></asp:Parameter>
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <!-- Listar las opciones padre del sistema -->
+                            <asp:SqlDataSource ID="sds_MenuSuperiorHijo" runat="server" ConnectionString="<%$ ConnectionStrings:SHVTBDConnectionString %>"
+                                SelectCommand="up_parque_s_OpcionesSistemaHijo" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                            <!-- Listar las opciones hijo del sistema -->
+
+                            <ul class="nav navbar-nav navbar-right" runat="server" id="mnu_Superior">
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- Pie de página -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-2x fa-angle-up"></i></a>
+
+            <footer class="footer">
+                <div class="">
+                    <div class="col-md-6 hidden-xs">
+                        <img src="Content/img/excavadora2.png" alt="LogoSistema" height="50" />
+                        <p class="text-left sistema-footer">
+                            Sistema de gestión del parque de operaciones     v. 180722
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p id="Copyright" class="text-right">
+                            <small>HRental - Huantajaya
+                                <br>
+                                Copyright &copy; 2020 - Área de Operaciones
+                            </small>
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </footer>
+
+
+            <style type="text/css">
+                .hiddencol {
+                    display: none;
+                }
+            </style>
+
+            <!-- Volver arriba -->
+            <script type="text/javascript">
+                jQuery(document).ready(function () {
+                    var offset = 150;
+                    var duration = 500;
+                    jQuery(window).scroll(function () {
+                        if (jQuery(this).scrollTop() > offset) {
+                            jQuery('.back-to-top').fadeIn(duration);
+                        } else {
+                            jQuery('.back-to-top').fadeOut(duration);
+                        }
+                    });
+
+                    jQuery('.back-to-top').click(function (event) {
+                        event.preventDefault();
+                        jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                        return false;
+                    })
+                });
+
+                //Seleccionar opción activa en menú
+                $(document).ready(function () {
+                    var url = window.location;
+                    $('.navbar .nav').find('.active').removeClass('active');
+                    $('.navbar .nav li a').each(function () {
+                        if (this.href == url) {
+                            $(this).parent().addClass('active');
+                        }
+                    });
+                });
+
+
+            </script>
+            <script>
+                $.fn.bootstrapSwitch.defaults.onText = 'SI';
+                $.fn.bootstrapSwitch.defaults.offText = 'NO';
+            </script>
+        </div>
+    </form>
+</body>
+</html>

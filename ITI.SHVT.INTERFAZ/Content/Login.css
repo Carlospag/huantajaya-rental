@@ -1,0 +1,306 @@
+.confirmacion {
+    color: black;
+}
+
+.col-md-12 h4 {
+    Text-align: center;
+}
+
+ul {
+    List-Style: none;
+}
+
+li {
+    background: Url(../Content/img/imgCheck.png) left top no-repeat;
+    padding-Left: 40px;
+}
+
+.form-horizontal .row {
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nuestraEspecialidad {
+    border-top: 1px solid #ffffff3a;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+body {
+    color: #fff;
+    font-family: 'Open Sans',sans-serif;
+    background-Image: none;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background: url(img/FondoVerde.JPG) no-repeat center center fixed;
+    background-color: #0000;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+.listaEspecialidad li {
+    padding-bottom: 10px;
+}
+
+h1 {
+    padding-left: 40px;
+}
+
+.validate-input {
+    margin-bottom: 10px;
+}
+
+/*.container-fluid {
+    padding-top: 15px;
+}*/
+.round {
+    border-radius: 25px 0 0 25px;
+}
+
+.roundNumber {
+    border-radius: 0 25px 25px 0 !important;
+}
+/*Corresponde al col de los textos*/
+.col-md-7.main_info_reumato {
+    /*border-right: 1px solid #ffffff3a;*/
+    padding: 15px 40px 15px 10px;
+    border-bottom: none;
+}
+
+.col-md-12.bg_hcuch_reumato img {
+    width: 22%;
+}
+
+.loginContainer {
+    background: #0a396190;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-Content: Space-between;
+    padding-top: 33px;
+    padding-Left: 80px;
+    padding-Right: 80px;
+    margin: 30px 0 0 0; /*NUEVO*/
+}
+
+
+.divBtnIniciarSesion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+/*A la imagen (logo) se le agregó este atributo*/
+.img-responsive .center-block {
+    width: 22%;
+}
+
+.btnIniciarSesion {
+    background: #57b846;
+    border-radius: 30px;
+    border: 1px solid #8fc145;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Cuprum', sans-serif;
+    Text-transform: uppercase;
+    font-size: 18px;
+    /*margin: -3px 0 0 20px;*/
+    padding: 2px 20px;
+    height: 50px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+    /*Esto corresponde al botón INICIO de sesión*/
+    .btnIniciarSesion:hover,
+    .btnIniciarSesion:active,
+    .btnIniciarSesion:focus {
+        background: #0000004d;
+        border: 1px solid #ffffff4d;
+        color: #fff;
+    }
+
+
+.form-horizontal .form-control {
+    /*font-size: 20px;*/
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 20px 0;
+}
+
+.col-md-5.wrap_login_reumato {
+}
+
+.row.wrap_principal_reumato {
+    padding: 70px 0 10px 0;
+}
+
+.btnCrearCuenta {
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 15px;
+    margin: 2px auto 20px;
+    padding: 2px 20px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+    /*Botón cree su cuenta*/
+    .btnCrearCuenta:hover,
+    .btnCrearCuenta:active,
+    .btnCrearCuenta:focus {
+        background: #0000004d;
+        border: 1px solid #ffffff4d;
+    }
+
+.txt1 {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.p-t-12 {
+    padding-top: 12px;
+}
+/*botón contraseña*/
+.txt2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+    .txt2:hover,
+    .txt2:active,
+    .txt2:focus {
+        text-decoration: none;
+        color: #ffffff7a;
+    }
+
+select::-ms-expand {
+    display: none;
+}
+/*botón contraseña*/
+
+.txt2:hover,
+.txt2:active,
+.txt2:focus {
+    text-decoration: none;
+    color: #ffffff7a;
+}
+
+.section {
+    border-left: 1px solid #ffffff3a;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: Url(i@media screen and (max-width: 768px) {
+
+
+    body {
+        background: url("../Content/img/imgCheck.png") no-repeat center center fixed;
+    }
+
+    .img-responsive .center-block {
+        width: 35%;
+    }
+
+    li {
+        margin-left: 5px;
+    }
+
+    .col-md-7 .main_info_reumato {
+        border-right: none !important;
+        to.jpg") no-repeat center center fixed;
+    }
+
+    .img-responsive .center-block {
+        width: 35%;
+    }
+
+    li {
+        margin-left: 5px;
+    }
+
+    .col-md-7 .main_info_reumato {
+        border-right: none !important;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 1px solid #ffffff3a !important;
+    }
+
+    .col-md-5.wrap_login_reumato {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul {
+        padding: 0px;
+    }
+
+    .col-md-7 {
+        border-right: 0px;
+        height: 100%;
+        border-bottom: 1px solid #ffffff3a !important;
+    }
+
+    #segundaFila {
+        height: 100%;
+    }
+
+    .loginContainer {
+        margin: 50px 0 0 0;
+    }
+
+    .row .wrap_principal_reumato {
+        padding: 20px 0 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .loginContainer {
+        background: no-repeat;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .col-md-7.main_info_reumato ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-md-12.bg_hcuch_reumato img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 360px) {
+}
+
+@media screen and (max-width: 320px) {
+}
